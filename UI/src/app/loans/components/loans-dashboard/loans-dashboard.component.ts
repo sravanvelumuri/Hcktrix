@@ -30,7 +30,7 @@ export class LoansDashboardComponent implements OnInit {
 
       this.loans = response;
 
-      if (filters.loanId) {
+      if (filters && filters.loanId) {
 
         this.loans = this.loans.filter(loan => {
 
@@ -40,7 +40,7 @@ export class LoansDashboardComponent implements OnInit {
 
       }
 
-      if (filters.status) {
+      if (filters && filters.status) {
 
         this.loans = this.loans.filter(loan => {
 
