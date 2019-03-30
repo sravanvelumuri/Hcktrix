@@ -26,7 +26,7 @@ public class CustomerDO {
 	 * Customer's PAN
 	 */
 	@JsonProperty(value="pan")
-	private String ssn;
+	private String pan;
 	
 	/**
 	 * Customer's score
@@ -40,7 +40,7 @@ public class CustomerDO {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
-        this.ssn = ssn;
+        this.pan = pan;
     }
 
     /**
@@ -85,20 +85,7 @@ public class CustomerDO {
 		this.birthDate = birthDate;
 	}
 
-	/**
-	 * @return the ssn
-	 */
-	public String getSsn() {
-		return ssn;
-	}
-
-	/**
-	 * @param ssn the ssn to set
-	 */
-	public void setSsn(String ssn) {
-		this.ssn = ssn;
-	}
-
+	
 	/**
 	 * @return the score
 	 */
@@ -119,9 +106,17 @@ public class CustomerDO {
                 + "First name='" + this.firstName + '\''
                 + ", Last name=" + this.lastName
                 + ", Date of birth=" + this.birthDate
-                + ", SSN=" + this.ssn
+                + ", PAN=" + this.pan
                 + '}';
     }
+
+	public String getPan() {
+		return pan;
+	}
+
+	public void setPan(String pan) {
+		this.pan = pan;
+	}
     
     
 } 
