@@ -9,7 +9,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class LoansDashboardComponent implements OnInit {
 
-  public loans: any[];
+  public loans: any;
   public filtersForm: FormGroup;
 
   constructor(private http: HttpClient, private fb: FormBuilder) { }

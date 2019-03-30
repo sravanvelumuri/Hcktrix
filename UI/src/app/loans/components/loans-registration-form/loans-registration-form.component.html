@@ -1,3 +1,65 @@
-<p>
-  loans-registration-form works!
-</p>
+<div class=" row">
+
+  <form class="col-lg-8 offset-lg-3" [formGroup]="registrationForm">
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-6">
+        <input type="text" formControlName="name" class="form-control" id="inputEmail3" placeholder="Enter Name">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label"> Salary</label>
+      <div class="col-sm-6">
+        <input type="text" formControlName="salary" class="form-control" id="inputEmail3" placeholder="Salary Anually">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Pan Number</label>
+      <div class="col-sm-6">
+        <input type="text" formControlName="pan" class="form-control" id="inputPassword3" placeholder="Pan">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Aaadhar Number</label>
+      <div class="col-sm-6">
+        <input type="text" formControlName="adhaar" class="form-control" id="inputPassword3"
+          placeholder="Aaadar Number">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Loan Amount</label>
+      <div class="col-sm-6">
+        <input type="text" formControlName="loanAmount" class="form-control" id="inputPassword3"
+          placeholder="Loan Amount">
+      </div>
+    </div>
+    <!-- <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">Do you have any Loan</legend>
+          <div class="col-sm-6">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <label class="form-check-label" for="gridRadios1">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                No
+              </label>
+            </div>
+          
+          </div>
+        </div>
+      </fieldset> -->
+
+    <div class="form-group row">
+      <div class="col-sm-8">
+        <button type="submit" (click)="registerLoan()" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
