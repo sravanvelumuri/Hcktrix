@@ -7,10 +7,15 @@
             <input type="text" formControlName="loanId" class="form-control" placeholder="Loan ID">
           </div>
           <div class="col-lg-5">
-            <input type="text" formControlName="status" class="form-control" placeholder="Last name">
+            <select class="form-control" formControlName="status">
+              <option value="">Select status</option>
+              <option value="Pending">Pending</option>
+              <option value="Approved">Approved</option>
+              <option value="Rejected">Rejected</option>
+            </select>
           </div>
           <div>
-            <button type="button" (click)="applyFilters($event)">Apply</button>
+            <button class="btn btn-outline" type="button" (click)="applyFilters($event)">Apply</button>
           </div>
         </div>
       </form>

@@ -21,20 +21,42 @@ export class LoansDashboardComponent implements OnInit {
       status: ''
     });
 
+    this.getLoans();
+  }
+
+  public getLoans(filters?: any) {
+
     this.http.get('assets/loans.json').subscribe(response => {
 
       this.loans = response;
 
-    }); 
+      if (filters.loanId) {
+
+        this.loans = this.loans.filter(loan => {
+
+          return loan.loanId.indexOf(this.filtersForm.get('loanId').value) > -1;
+
+        })
+
+      }
+
+      if (filters.status) {
+
+        this.loans = this.loans.filter(loan => {
+
+          return loan.status === this.filtersForm.get('status').value;
+
+        })
+
+      }
+
+    });
+
   }
 
   public applyFilters(event: any) {
 
-    this.loans = this.loans.filter(loan => {
-
-      return loan.loanId.indexOf(this.filtersForm.get('loanId').value) > -1 || loan.status === this.filtersForm.get('status').value;
-
-    })
+    this.getLoans(this.filtersForm.value);
 
   }
 
