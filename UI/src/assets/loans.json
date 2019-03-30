@@ -1,0 +1,58 @@
+[
+    {
+      "loanId": "123",
+      "name": "Test1",
+      "amount": "10000",
+      "status": "Pending",
+      "rateOfInterest": "12.00"
+    },
+    {
+      "loanId": "123",
+      "name": "Test1",
+      "amount": "10000",
+      "status": "Approved",
+      "rateOfInterest": "12.00"
+    },
+    {
+      "loanId": "123",
+      "name": "Test1",
+      "amount": "10000",
+      "status": "Pending",
+      "rateOfInterest": "12.00"
+    },
+    {
+      "loanId": "123",
+      "name": "Test1",
+      "amount": "10000",
+      "status": "Pending",
+      "rateOfInterest": "12.00"
+    },
+    {
+      "loanId": "123",
+      "name": "Test1",
+      "amount": "10000",
+      "status": "Approved",
+      "rateOfInterest": "12.00"
+    },
+    {
+      "loanId": "123",
+      "name": "Test1",
+      "amount": "10000",
+      "status": "Pending",
+      "rateOfInterest": "12.00"
+    },
+    {
+      "loanId": "123",
+      "name": "Test1",
+      "amount": "10000",
+      "status": "Pending",
+      "rateOfInterest": "12.00"
+    },
+    {
+      "loanId": "123",
+      "name": "Test1",
+      "amount": "10000",
+      "status": "Pending",
+      "rateOfInterest": "12.00"
+    }
+  ]

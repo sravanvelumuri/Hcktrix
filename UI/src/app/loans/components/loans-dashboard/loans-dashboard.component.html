@@ -1,3 +1,44 @@
-<p>
-  loans-dashboard works!
-</p>
+<div class="row m-0 p-2">
+  <div class="offset-lg-2 col-lg-8 col-md-8 col-sm-8">
+    <div>
+      <form class="mb-1" [formGroup]="filtersForm">
+        <div class="form-row">
+          <div class="col-lg-5">
+            <input type="text" formControlName="loanId" class="form-control" placeholder="Loan ID">
+          </div>
+          <div class="col-lg-5">
+            <input type="text" formControlName="status" class="form-control" placeholder="Last name">
+          </div>
+          <div>
+            <button type="button" (click)="applyFilters($event)">Apply</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <table class="table loans-table">
+      <thead>
+        <tr class="grid-header">
+          <th scope="col">Loan ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Rate of interest</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let loan of loans">
+          <td>
+            <span>{{ loan.loanId }}</span>
+          </td>
+          <td><span>{{ loan.name }}</span></td>
+          <td><span>{{ loan.amount }}</span></td>
+          <td><span>{{ loan.rateOfInterest }}</span></td>
+          <td><span [ngClass]="{'text-danger' : loan.status === 'Rejected', 'text-warning': loan.status === 'Pending', 
+      'text-success': loan.status === 'Approved'}">
+              {{ loan.status }}</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
